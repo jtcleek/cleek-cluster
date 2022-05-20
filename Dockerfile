@@ -40,7 +40,7 @@ ENV DRUPAL_MD5 aedc6598b71c5393d30242b8e14385e5
 COPY --from=vendor /app/ /var/www/html/
 
 # Copy other required configuration into the container.
-#COPY config/ /var/www/html/config/
+COPY config/ /var/www/html/config/
 
 # Make sure file ownership is correct on the document root.
 RUN chown -R www-data:www-data /var/www/html/web
